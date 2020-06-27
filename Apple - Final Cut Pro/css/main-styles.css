@@ -1,0 +1,1040 @@
+﻿/***********************************************************/
+/************************* RESETS *************************/
+/*********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/***********************************************************/
+/********************** COMMON STYLES *********************/
+/*********************************************************/
+body {
+    font-size: 10px;
+    font-family: Myrad Pro, Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-image: url(../img/body-bg.jpg);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.animatable {
+    /* initially hide animatable objects */
+    visibility: hidden;
+    
+    /* initially pause animatable objects their animations */
+    -webkit-animation-play-state: paused;   
+    -moz-animation-play-state: paused;     
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;   
+    animation-play-state: paused; 
+  }
+
+.buy-now {
+    background: rgb(67,150,210); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(67,150,210,1) 0%, rgba(22,85,151,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(67,150,210,1) 0%,rgba(22,85,151,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(67,150,210,1) 0%,rgba(22,85,151,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4396d2', endColorstr='#165597',GradientType=0 ); /* IE6-9 */
+    border-radius: 30px;
+    border: none;
+    padding: 7px 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+a.read-more {
+    position: relative;
+    color: #89d2fe;
+    font-size: 1.6em;
+    top: 12px;
+}
+
+/***********************************************************/
+/************************* HEADER *************************/
+/*********************************************************/
+
+header {
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 13%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 13%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    padding-top: 30px;
+}
+
+/***********************************************************/
+/******************* MAIN TOP NAVIGATION ******************/
+/*********************************************************/
+
+.main-mac-menu {
+    width: 100%;
+    background: rgb(163,163,159); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(163,163,159,1) 0%, rgba(112,112,112,1) 50%, rgba(96,96,96,1) 51%, rgba(142,142,138,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(163,163,159,1) 0%,rgba(112,112,112,1) 50%,rgba(96,96,96,1) 51%,rgba(142,142,138,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(163,163,159,1) 0%,rgba(112,112,112,1) 50%,rgba(96,96,96,1) 51%,rgba(142,142,138,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3a39f', endColorstr='#8e8e8a',GradientType=0 ); /*IE6-9*/
+    border-radius: 5px;
+    border-bottom: 1px solid #2d2d2b;
+}
+
+.logo, .secondary-navigaton {
+    width: 49.4%;
+}
+
+    .main-mac-menu ul li,
+    .secondary-navigaton ul li,
+    .logo, .secondary-navigaton {
+        display: inline-block;
+    }
+
+.main-mac-menu ul li {
+    padding: 1% 2.7%;
+    border-right: 2px solid #6c6c6c;
+    vertical-align: middle;
+}
+
+    .main-mac-menu ul li a,
+    .secondary-navigaton ul li a {
+        color: #fff;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-shadow: -1px 1px 1px rgba(0, 0, 0, .55);
+    }
+
+    .main-mac-menu ul li a {
+        color: #fff;
+        font-size: 1.4em;
+    }
+
+.main-mac-menu .search {
+    background: transparent;
+    background-image: url(../img/search-lens.png);
+    background-repeat: no-repeat;
+    background-position: center left 11px;
+    border-top: 2px solid #484848;
+    border-bottom: 2px solid #484848;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 1.5% 5% 1.5% 16%;
+    font-weight: bold;
+}
+
+.main-mac-menu ul li:first-child {
+    padding: .6% 4.3%;
+    border-radius: 5px 0 0 5px;
+}
+
+.main-mac-menu ul li:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right: none;
+    padding: .85% 2.2%;
+    margin-right: 0;
+}
+
+/***********************************************************/
+/****************** SECONDARY NAVIGATION ******************/
+/*********************************************************/
+
+#bottom-navigation {
+    margin-top: 3.2%;
+}
+
+.secondary-navigaton ul {
+    text-align: right;
+    position: relative;
+    right: -14px;
+}
+
+    .secondary-navigaton ul li {
+        margin-left: 4%;
+    }
+
+        .secondary-navigaton ul li a {
+            font-size: 1.4em;
+        }
+
+/***********************************************************/
+/************************* SLIDER *************************/
+/*********************************************************/
+
+.main-slider {
+    margin-top: 6%;
+    text-align: center;
+}
+
+    .main-slider h2.product-heading {
+        font-size: 7em;
+        font-weight: bold;
+        color: #dedede;
+    }
+
+    .main-slider h3.product-subtitle {
+        font-size: 3.2em;
+        font-weight: bold;
+        color: #f0f0f0
+    }
+
+    .main-slider p.price-description {
+        margin-top: 25px;
+    }
+
+        .main-slider p.price-description a {
+            color: #95c2eb;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px #1a1919;
+        }
+
+    .main-slider .mac-slider {
+        margin-top: 9%;
+        background-image: url(../img/macbook-slider-bottom-bg.png);
+        padding: 2% 0 6.9%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+#main-mac-slider {
+    background-image: url(../img/macbook-slider-display-bg.png);
+    background-repeat: no-repeat;
+    padding: 2.2%;
+    background-position: top center;
+    background-size: 100%;
+    width: 76.5%;
+    margin: 0 auto;
+    box-shadow: 0 0 350px;
+    position: relative;
+    top: -31px;
+    border-radius: 34px 34px 0 0;
+}
+
+/***********************************************************/
+/********************** MAIN CONTENT **********************/
+/*********************************************************/
+
+.video-icon {
+    width: 25%;
+    margin: 0 auto;
+}
+
+    .video-icon img {
+        cursor: pointer;
+    }
+
+    .video-icon a {
+        display: inline-block;
+        width: 49%;
+        font-size: 2.2em;
+        color: #47a2d9;
+        margin-left: 5%;
+        vertical-align: top;
+    }
+
+.featured-news {
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(3,3,3,0.65) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(3,3,3,0.65) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(3,3,3,0.65) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#a6030303',GradientType=0 ); /* IE6-9 */
+    border-radius: 0 0 8px 8px;
+}
+
+.last-news {
+    margin-top: 4%;
+}
+
+    .last-news article {
+        display: inline-block;
+        width: 29.1%;
+        padding: 2%;
+        border-left: 1px solid #303030
+    }
+
+        .last-news article:first-child {
+            border-left: none;
+            border-radius: 0 0 0 8px
+        }
+
+        .last-news article:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .last-news article:hover {
+            cursor: pointer;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(53,53,53,0.65) 60%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(53,53,53,0.65) 60%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(53,53,53,0.65) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#a6353535',GradientType=0 ); /* IE6-9 */
+        }
+
+        .last-news article h2 a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 2.2em;
+            font-family: Myrad Pro, Arial, Helvetica, sans-serif;
+        }
+
+        .last-news article p,
+        .our-products .product-description p {
+            color: #a8a8a8;
+            font-size: 1.6em;
+            margin-top: 2%;
+            line-height: 1.4em;
+        }
+
+    .last-news .post-image {
+        margin-top: 10%;
+    }
+
+        .last-news .post-image img {
+            width: 100%;
+        }
+
+.our-products {
+    border-bottom: 1px solid #616161;
+    border-radius: 0 0 8px 8px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 19%, rgba(0,0,0,0.22) 36%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 19%,rgba(0,0,0,0.22) 36%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 19%,rgba(0,0,0,0.22) 36%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+    .our-products .product-description h2 a, .product-description h3,
+    .pre-footer .app-store .app-store-description h2 a {
+        font-size: 2.2em;
+        font-family: Myrad Pro, Arial, Helvetica, sans-serif;
+    }
+
+    .our-products .product-description h2 a {
+        color: #fff;
+    }
+
+.product-heading {
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-weight: normal
+}
+
+.our-products .featured-product {
+    display: block;
+    width: 96.5%;
+    padding: 2%;
+    background: none;
+    border-bottom: 1px solid #454545;
+}
+
+    .our-products .featured-product .featured-image {
+        vertical-align: 0;
+        width: 13%;
+    }
+
+    .our-products .featured-product .product-description {
+        width: 70%;
+        line-height: 2.2em;
+    }
+
+.our-products article,
+.our-products .featured-image,
+.our-products .product-description,
+.pre-footer .app-store,
+.pre-footer .promo-product-prices,
+.app-store .app-store-logo,
+.app-store .app-store-description,
+.footer-navigation ul li {
+    display: inline-block;
+}
+
+.our-products article {
+    width: 44.85%;
+    padding: 2.5%;
+    border-top: 1px solid #454545;
+    background: -moz-linear-gradient(35deg, rgba(97,97,97,0.75) 0%,rgba(57,57,57,0.75) 55%,rgba(24,24,24,0) 75%,rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(35deg, rgba(97,97,97,0.75) 0%,rgba(57,57,57,0.75) 55%,rgba(24,24,24,0) 75%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(35deg, rgba(97,97,97,0.75) 0%,rgba(57,57,57,0.75) 55%,rgba(24,24,24,0) 75%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf616161', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.our-products .featured-image {
+    width: 20%;
+    vertical-align: top;
+}
+
+.our-products .product-description {
+    width: 79%;
+}
+
+.our-products .featured-product .product-description p {
+    font-weight: normal;
+    text-shadow: 0 -1px 1px #000;
+}
+
+.our-products .product-description p {
+    font-weight: bold;
+}
+
+.video-final-cut-pro {
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.video-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: .5%;
+    background-color: #fff;
+    position: relative;
+    top: 20%;
+    text-align: right;
+}
+
+.close-btn {
+    background-color: transparent;
+    background-image: url(../img/close_button.png);
+    background-size: cover;
+    padding: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+#youtube-video {
+    margin-top: 10px;
+}
+
+/***********************************************************/
+/************************* FOOTER *************************/
+/*********************************************************/
+footer {
+    margin-top: 5%;
+}
+
+.pre-footer {
+    padding: 0 3%;
+}
+
+.app-store {
+    width: 75%;
+    border-right: 1px solid #373737
+}
+
+.promo-product-prices {
+    width: 24%;
+}
+
+.app-store .app-store-logo {
+    width: 14%;
+}
+
+.app-store .app-store-description {
+    width: 75%;
+    margin-top: 2%;
+    vertical-align: top;
+}
+
+    .app-store .app-store-description h2 a {
+        color: #ccc;
+        text-shadow: 0 -1px 1px #000;
+    }
+
+    .app-store .app-store-description p {
+        color: #b8b8b8;
+        font-size: 1.8em;
+        margin-top: 2%;
+        text-shadow: 0 -1px 1px #000;
+    }
+
+.pre-footer .promo-product-prices {
+    text-align: right;
+    font-size: 2.2em;
+    vertical-align: top;
+    line-height: 1.4em;
+}
+
+    .pre-footer .promo-product-prices button.buy-now {
+        width: 50%;
+        font-size: 0.8em;
+        margin-top: 2%;
+    }
+
+.footer-links {
+    margin-top: 3%;
+    padding-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #545454;
+    background-image: url(../img/footerlinks-arrows.png);
+    background-repeat: no-repeat;
+    background-position: 40px 0;
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px rgba(3, 3, 3, .5) inset;
+}
+
+.services {
+    border-top: 1px solid #4f4f4f;
+    padding: 2.5% 2.5% 0;
+}
+
+.service-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+}
+
+    .service-list h4 {
+        font-size: 1.8em;
+        font-weight: bold;
+        line-height: 1.4em;
+    }
+
+.footer-service-links {
+    margin-bottom: 20%;
+}
+
+    .footer-service-links li a {
+        color: #969696;
+        font-size: 1.4em;
+        line-height: 1.6em;
+    }
+
+.footer-navigation {
+    margin-top: 4%;
+}
+
+    .footer-navigation ul {
+        width: 58%;
+        margin: 0 auto;
+    }
+
+        .footer-navigation ul li {
+            padding: 0 1.7%;
+            border-left: 1px solid #707070;
+        }
+
+            .footer-navigation ul li:first-child {
+                border-left: none;
+            }
+
+            .footer-navigation ul li a {
+                color: #89d2fe;
+                font-size: 1.4em;
+            }
+
+.copyright {
+    margin-top: 2%;
+    padding: 0 0 3% 0;
+    border-top: 1px solid #575757;
+    text-align: center;
+    color: #969696;
+    font-size: 1.2em;
+}
+
+    .copyright a {
+        color: #89d2fe;
+    }
+
+    .copyright p {
+        margin-top: 2%;
+    }
+
+/***********************************************************/
+/*********************** MEDIA QUERIES ********************/
+/*********************************************************/
+
+@media screen and (max-width: 1200px) {
+    .content {
+        width: 95%;
+    }
+
+    .main-mac-menu ul li {
+        padding: 1% 2.2%;
+    }
+
+        .main-mac-menu ul li:last-child {
+            padding: .85% 1%;
+        }
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+    .last-news article {
+        width: 28.5%;
+        padding: 2.3%;
+        min-height: 350px;
+        vertical-align: top;
+    }
+
+    .footer-navigation ul {
+        width: 70%;
+    }
+
+    .video-container {
+        padding: 2%;
+    }
+}
+
+@media screen and (max-width: 1137px) {
+    .video-icon {
+        width: 35%;
+    }
+
+    .logo {
+        width: 38.5%;
+    }
+
+    .secondary-navigaton {
+        width: 60.4%;
+    }
+
+    #main-mac-slider {
+        padding: 2.6%;
+    }
+
+    .last-news article {
+        width: 27.5%;
+        padding: 2.7%;
+    }
+
+    .our-products article:not(:first-child) {
+        vertical-align: top;
+        min-height: 190px;
+    }
+
+    .pre-footer .app-store,
+    .pre-footer .promo-product-prices {
+        display: block;
+        text-align: center;
+    }
+
+    .pre-footer .app-store {
+        width: 100%;
+        border-right: none;
+    }
+
+    .pre-footer .promo-product-prices {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .service-list {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .secondary-navigaton ul li a {
+        font-size: 1.6em;
+    }
+
+    .main-mac-menu ul li:first-child {
+        padding: .6% 3%
+    }
+
+    #main-mac-slider {
+        padding: 2.9%;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 6.5%;
+    }
+
+    .last-news article p, a.read-more,
+    .our-products .product-description p,
+    .app-store .app-store-description p {
+        font-size: 2em;
+    }
+
+    .last-news article {
+        min-height: 390px;
+    }
+
+    .last-news article h2 a,
+    .product-description h3,
+    .our-products .product-description h2 a,
+    .pre-footer .app-store .app-store-description h2 a {
+        font-size: 2.4em;
+    }
+
+    .our-products article {
+        width: 98%;
+        padding: 2.5% 3%;
+        border-top: none;
+    }
+
+    .footer-navigation ul {
+        width: 80%;
+    }
+
+    .service-list h4 {
+        font-size: 2.2em;
+    }
+
+    .footer-service-links li a {
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .main-mac-menu {
+        position: absolute;
+        width: 95%;
+        top: 20px;
+        z-index: 100;
+        text-align: center;
+    }
+
+        .main-mac-menu ul li:not(:first-child) {
+            display: none;
+            font-size: 1.8em;
+            line-height: 2em;
+            background-color: #636363;
+        }
+
+        .main-mac-menu ul li:not(:first-child).active {
+            display: block;
+        }
+
+        .main-mac-menu ul li:first-child {
+            border: none;
+        }
+
+        .main-mac-menu .search {
+            padding: .5% 4%
+        }
+
+        .last-news article {
+            min-height: 410px;
+        }
+
+    #bottom-navigation {
+        margin-top: 8.2%;
+    }
+
+    .logo, .secondary-navigaton {
+        display: block;
+        width: 100%;
+    }
+
+    .secondary-navigaton {
+        margin-top: 3%;
+    }
+
+        .logo, .secondary-navigaton ul {
+            text-align: center;
+        }
+
+            .logo img {
+                width: 40%;
+            }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 6%;
+    }
+
+    .our-products .featured-product .featured-image {
+        width: 20%;
+    }
+
+    .footer-navigation ul {
+        width: 90%;
+    }
+
+    .service-list {
+        width: 33%;
+    }
+
+        .service-list h4 {
+            font-size: 2.2em;
+        }
+
+    .footer-service-links li a {
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .main-slider .mac-slider {
+        padding: 2% 0 5.5%;
+    }
+
+    .video-icon {
+        width: 45%;
+    }
+
+    .last-news article {
+        display: block;
+        width: 95%;
+    }
+
+        .last-news article p, a.read-more,
+        .our-products .product-description p,
+        .app-store .app-store-description p {
+            font-size: 2.2em;
+        }
+
+    .our-products .featured-product .featured-image {
+        vertical-align: top;
+    }
+
+    .service-list h4 {
+        font-size: 2em;
+    }
+
+    .footer-service-links li a {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 787px) {
+    .app-store .app-store-logo,
+    .footer-navigation ul {
+        width: 100%;
+    }
+
+    .pre-footer .promo-product-prices {
+        margin-top: 4%;
+        font-size: 2.8em;
+    }
+}
+
+@media screen and (max-width: 708px) {
+    .main-mac-menu .search {
+        padding: .5% 5%;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 5%;
+    }
+
+    .last-news article h2 a,
+    .product-description h3,
+    .our-products .product-description h2 a,
+    .pre-footer .app-store .app-store-description h2 a {
+        font-size: 2.8em;
+    }
+
+    .service-list {
+        width: 49%;
+    }
+
+        .service-list h4 {
+            font-size: 2.2em;
+        }
+
+    .footer-service-links li a {
+        font-size: 2em;
+    }
+
+    .footer-navigation ul li {
+        display: block;
+        border-left: none;
+        line-height: 2.5em;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 1.8em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 636px) {
+    .secondary-navigaton ul {
+        right: 0;
+    }
+
+        .secondary-navigaton ul li {
+            display: block;
+        }
+
+            .secondary-navigaton ul li a {
+                font-size: 2.2em;
+                line-height: 2em;
+            }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 4.5%;
+    }
+
+    .video-icon {
+        width: 80%;
+    }
+
+    .last-news article p, a.read-more,
+    .our-products .product-description p,
+    .app-store .app-store-description p {
+        font-size: 2.2em;
+    }
+
+    .last-news article {
+        display: block;
+        width: 95%;
+    }
+
+    .last-news article {
+        margin-top: 3%;
+    }
+
+    .our-products article {
+        width: 94%;
+        padding: 3.5% 3%;
+    }
+
+    .our-products .featured-product {
+        padding: 11% 3% 3%;
+    }
+
+        .our-products .featured-image,
+        .our-products .featured-product .featured-image {
+            display: none;
+        }
+
+        .our-products .product-description,
+        .our-products .featured-product .featured-image,
+        .our-products .featured-product .product-description {
+            width: 90%;
+        }
+}
+
+@media screen and (max-width: 576px) {
+    .main-mac-menu .search {
+        padding: .5% 6%;
+    }
+
+    #main-mac-slider {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 4%;
+    }
+
+    .pre-footer .promo-product-prices button.buy-now {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 535px) {
+
+    #bottom-navigation {
+        margin-top: 12.2%;
+    }
+
+    .main-slider h2.product-heading {
+        font-size: 4em;
+    }
+
+    .main-slider h3.product-subtitle {
+        font-size: 2.2em;
+    }
+
+    .main-slider p.price-description a {
+        font-size: 1.6em;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 3.2%;
+    }
+
+    .service-list {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-mac-menu .search {
+        padding: .5% 7%;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 2.2%;
+    }
+
+    .service-list {
+        width: 100%;
+        text-align: center;
+    }
+
+        .service-list h4 {
+            font-size: 2.8em;
+        }
+
+    .footer-service-links li a {
+        font-size: 2.4em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo img {
+        width: 80%;
+    }
+
+    .main-mac-menu .search {
+        padding: .5% 8%;
+    }
+
+    #bottom-navigation {
+        margin-top: 20.2%;
+    }
+
+    .main-slider .mac-slider {
+        padding: 2% 0 1%;
+    }
+
+    .video-icon {
+        width: 100%;
+    }
+}

@@ -1,0 +1,766 @@
+/***********************************************************/
+/************************* RESETS *************************/
+/*********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/***********************************************************/
+/********************** COMMON STYLES *********************/
+/*********************************************************/
+
+body {
+    font-size: 10px;
+    font-family: Myrad Pro, Arial, Helvetica, sans-serif;
+    background-image: url(../img/body-bg.jpg);
+    background-repeat: repeat;
+}
+
+header, footer {
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: repeat;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+ul.main-navigation-items li,
+ul.footer-navigation-items li,
+ul.socials-icons li, .logo,
+.main-navigation, .bridal-jewelery,
+.bridal-accessories, .bridal-shoes,
+.groom-dresses, .featured-news,
+.all-news, .post-image, .post-summary,
+.socials, .footer-navigation {
+    display: inline-block;
+}
+
+.logo, .socials {
+    width: 48%;
+}
+
+.main-navigation,
+.footer-navigation {
+    width: 51%;
+}
+
+.main-navigation, .footer-navigation {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    vertical-align: top;
+    padding: 1.2% 0;
+}
+
+ul.main-navigation-items li,
+ul.footer-navigation-items li {
+    margin-left: 3.4%;
+}
+
+ul.main-navigation-items li a,
+ul.footer-navigation-items li a {
+    color: #999;
+}
+
+ul.main-navigation-items li a:hover,
+ul.footer-navigation-items li a:hover {
+    color: #545454;
+}
+
+.categories, .blog-news, footer {
+    margin-top: 3.2%;
+}
+
+/***********************************************************/
+/************************* HEADER *************************/
+/*********************************************************/
+
+header {
+    box-shadow: 0 0 10px rgba(23, 22, 25, .6);
+    padding: 1.6% 0;
+}
+
+.logo img {
+    width: 320px;
+    max-width: 350px;
+}
+
+/***********************************************************/
+/*********************** NAVIGATION ***********************/
+/*********************************************************/
+
+ul.main-navigation-items li {
+    position: relative;
+}
+
+.mobile-icon {
+    display: none;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-right: 3%;
+    padding: 3px 13px;
+    color: #fff;
+    background-color: #999;
+    font-size: 1.2em;
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 5px;
+    min-width: 200px;
+    position: absolute;
+    top: 20px;
+    text-align: left;
+    z-index: 100;
+}
+
+.dropdown-menu:before {
+    content: "";
+    border-bottom: 5px solid rgba(0, 0, 0, .7);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+}
+
+ul.main-navigation-items li:hover ul.dropdown-menu,
+ul.dropdown-menu li a {
+    display: block;
+}
+
+ul.dropdown-menu li {
+    display: block;
+    padding: 0 5% 0;
+    margin-left: -10px;
+}
+
+    ul.dropdown-menu li a {
+        width: 95%;
+        padding: 5%;
+        color: #fff;
+    }
+    
+    ul.dropdown-menu li:hover a {
+        background-color: rgba(255, 255, 255, .7);
+        color: #000;
+    }
+
+/***********************************************************/
+/************************** CART **************************/
+/*********************************************************/
+
+.mini-cart {
+    width: 150px;
+    background-color: #fff;
+    position: relative;
+    left: 85.5%;
+    top: 0;
+    padding: 10px;
+    color: #666;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(23, 22, 25, .6);
+}
+
+.products-popup {
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.products-in-cart {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+    top: 20%;
+    text-align: right;
+}
+
+.product-image,
+.product-title,
+.product-price,
+.product-quantity,
+.remove-product {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product-image {
+    width: 11%;
+}
+
+.product-title {
+    width: 59%;
+}
+
+.product-quantity {
+    width: 5%;
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.product-price {
+    width: 19%;
+}
+
+.remove-product {
+    width: 4%;
+    cursor: pointer;
+}
+
+.product-title,
+.product-price {
+    font-size: 2.3em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.product-image img {
+    width: 80px;
+}
+
+#total, #total-amount,
+.checkout, .continue-shopping {
+    font-size: 2.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#total-amount, .checkout,
+.continue-shopping {
+    text-align: center;
+}
+
+.product-name {
+    color: #333;
+    font-weight: bold;
+}
+
+#remove {
+    vertical-align: middle;
+    background-image: url(../img/delete-icon.png);
+    background-size: cover;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+
+.remove {
+    background-image: url(../img/delete-icon.png);
+    background-size: cover;
+    padding: 40%;
+    border: none;
+    cursor: pointer;
+}
+
+.shopping-checkout-buttons {
+    margin-top: 20px;
+}
+
+.shopping-checkout-buttons a {
+    color: #333;
+}
+
+.continue-shopping,
+.checkout {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+#cart-amount {
+    margin-right: 8%;
+}
+/***********************************************************/
+/************************* SLIDER *************************/
+/*********************************************************/
+#slider {
+    margin-top: 60px;
+    background-color: #333;
+}
+
+#ninja-slider {
+    width: 85.5%;
+}
+/***********************************************************/
+/********************** MAIN CONTENT **********************/
+/*********************************************************/
+
+.slogan {
+    background-color: rgba(255, 255, 255, .5);
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 2.9em;
+    text-align: center;
+    color: #666;
+    margin-top: 3.2%;
+    padding: 1.1%;
+}
+
+.slogan span {
+    font-weight: bold;
+}
+
+.categories h3 {
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    padding: 6% 0 6.5%;
+    border-top: 2px solid #fff;
+}
+
+.categories h3 a {
+    color: #595959;
+}
+
+.bridal-jewelery, .bridal-accessories,
+.bridal-shoes, .groom-dresses {
+    width: 22.5%;
+    background-size: cover;
+    padding: 15.8% 0 0;
+    margin-left: 2.9%;
+}
+
+.bridal-jewelery {
+    background-image: url(../img/bridal-jewelery.jpg);
+    margin-left: 0;
+}
+
+.bridal-accessories {
+    background-image: url(../img/bridal-accessories.jpg)
+}
+
+.bridal-shoes {
+    background-image: url(../img/bridal-shoes.jpg);
+}
+
+.groom-dresses {
+    background-image: url(../img/groom-corner.jpg);
+}
+
+.blog-news {
+    background-color: rgba(255, 255, 255, .5);
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px 0 30px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    color: #959595;
+}
+
+.blog-news article,
+.blog-news a.read-more,
+.featured-news p {
+    margin-top: 20px;
+}
+
+.blog-news a.read-more {
+    display: block;
+    color: #a154a1;
+    font-style: italic;
+    text-align: right;
+}
+
+.featured-news, .all-news {
+    width: 48%;
+    vertical-align: top;
+}
+
+.featured-news {
+    margin-right: 2%;
+}
+
+.featured-news .post-image,
+.featured-news .post-summary {
+    display: block;
+    width: 100%;
+}
+
+.all-news .post-image, 
+.all-news .post-summary {
+    vertical-align: top;
+}
+
+.all-news .post-image {
+    width: 30%;
+}
+
+.all-news .post-summary {
+    width: 67%;
+    margin-left: 2.3%;
+}
+
+.featured-news h2.post-heading,
+.featured-news .post-summary {
+    margin-top: 3%;
+}
+
+h2.post-heading {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+h2.post-heading a {
+    color: #494949;
+}
+
+.all-news .post-summary p {
+    margin-top: 6.5%;
+}
+/***********************************************************/
+/************************* FOOTER *************************/
+/*********************************************************/
+
+footer {
+    border-top: 3px solid #ccc;
+    padding: 2.1% 0;
+}
+
+ul.socials-icons li {
+    margin-right: 3.4%;
+}
+
+/***********************************************************/
+/*********************** MEDIA QUERIES ********************/
+/*********************************************************/
+
+@media screen and (max-width: 1240px) {
+    .content {
+        width: 90%;
+    }
+
+    .products-in-cart {
+        width: 71.5%;
+    }
+
+    #ninja-slider {
+        width: 84%;
+    }
+
+    .featured-news,
+    .all-news {
+        display: block;
+        width: 100%;
+    }
+
+    .blog-news {
+        font-size: 1.6em;
+    }
+
+    .socials {
+        width: 38%;
+    }
+
+    .footer-navigation {
+        width: 61%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #ninja-slider {
+        width: 100%;
+    }
+
+    #thumbnail-slider {
+        display: none;
+    }
+
+    .socials {
+        width: 18%;
+    }
+
+    .footer-navigation {
+        width: 81%
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-navigation,
+    ul.main-navigation-items li {
+        background-color: #999;
+    }
+
+    .main-navigation {
+        border-radius: 5px;
+    }
+
+    ul.main-navigation-items {
+        position: absolute;
+        z-index: 100;
+        right: 5.6%;
+        width: 47.5%;
+    }
+
+    ul.main-navigation-items li {
+        display: none;
+        text-align: center;
+        line-height: 3em;
+        border-bottom: 1px solid #fff;
+    }
+
+    ul.main-navigation-items li.active {
+        display: block;
+    }
+
+    ul.main-navigation-items li:last-child {
+        border-radius: 0 0 5px 5px;
+        border-bottom: none;
+    }
+
+    ul.main-navigation-items li a {
+        color: #fff;
+    }
+
+    .mobile-icon {
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        position:relative;
+        top: 0;
+    }
+
+    .dropdown-menu:before {
+        display: none;
+    }
+
+    ul.dropdown-menu li {
+        padding: 0;
+        margin-left: 0;
+        line-height: 2em;
+        border-bottom: none;
+    }
+
+    ul.dropdown-menu li a {
+        width: 98%;
+        padding: 1%;
+    }
+
+    .mini-cart {
+        left: 81.5%;
+    }
+}
+
+@media screen and (max-width: 900px)  {
+
+    .mini-cart {
+        left: 78.5%;
+    }
+    
+    .products-in-cart {
+        width: 80%;
+    }
+
+    .slogan {
+        font-size: 2em;
+    }
+
+    .bridal-jewelery,
+    .bridal-accessories,
+    .bridal-shoes, .groom-dresses {
+        width: 47.5%;
+        padding: 32.8% 0 0;
+    }
+
+    .bridal-shoes,
+    .groom-dresses {
+        margin-top: 2.9%;
+    }
+
+    .bridal-jewelery,
+    .bridal-shoes {
+        margin-left: 0;
+    }
+
+    .bridal-accessories,
+    .groom-dresses {
+        margin-left: 2.9%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .logo, .main-navigation,
+    .socials, .footer-navigation {
+        display: block;
+        width: 100%;
+    }
+
+    .logo, .socials,
+    .footer-navigation {
+        text-align: center;
+    }
+
+    .main-navigation,
+    .footer-navigation {
+        margin-top: 2%;
+    }
+
+    ul.main-navigation-items {
+        right: 5%;
+        width: 93.2%;
+    }
+
+    .mini-cart {
+        left: 74.5%;
+    }
+
+    .products-in-cart {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mini-cart {
+        left: 70.5%;
+    }
+
+    .all-news .post-summary {
+        width: 73%;
+    }
+
+    .all-news .post-image {
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .cart {
+        left: 65.5%;
+    }
+
+    .product-title,
+    .product-price,
+    #total, #total-amount,
+    .checkout, .continue-shopping {
+        font-size: 2em;
+    }
+
+    .product-title {
+        width: 55%;
+    }
+
+    .product-quantity {
+        font-size: 1.4em;
+    }
+
+    #remove {
+        padding: 2.5%;
+    }
+
+    .remove-product {
+        width: 7%;
+    }
+
+    h2.post-heading {
+        font-size: 1.4em;
+    }
+
+    .all-news .post-summary p {
+        margin-top: 4.5%;
+    }
+
+    ul.footer-navigation-items li {
+        display: block;
+        line-height: 2em;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mini-cart {
+        left: 50.5%;
+    }
+
+    .product-title,
+    .product-price,
+    #total, #total-amount,
+    .checkout, .continue-shopping {
+        font-size: 1.4em;
+    }
+
+    .all-news .post-image,
+    .all-news .post-summary {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .mini-cart {
+        left: 25%;
+    }
+
+    .product-title {
+        width: 50%;
+    }
+
+    .product-quantity {
+        width: 9%;
+    }
+
+    .product-image img{
+        width: 60px;
+    }
+
+    .slogan {
+        font-size: 1.6em;
+        line-height: 1.6em;
+    }
+
+    .bridal-jewelery, .bridal-accessories, 
+    .bridal-shoes, .groom-dresses {
+        display: block;
+        width: 100%;
+        margin-top: 6%;
+        margin-left: 0;
+        padding: 68.8% 0 0;
+    }
+}

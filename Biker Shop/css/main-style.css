@@ -1,0 +1,443 @@
+﻿/***********************************************************/
+/************************* RESETS *************************/
+/*********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/***********************************************************/
+/********************** COMMON STYLES *********************/
+/*********************************************************/
+
+body {
+    color: #fff;
+    font-size: 10px;
+    background-color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+ul li, ol li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.main-navigation,
+.search-input {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+/***********************************************************/
+/************************* HEADER *************************/
+/*********************************************************/
+
+header {
+    background-color: #232323;
+    padding: 20px;
+}
+
+.logo, .header-contacts,
+ul.main-navigation li,
+.footer-logo, .company-address,
+.opening-time, .footer-socials,
+.fb-likes, .tweet-likes, .google-plus {
+    display: inline-block;
+}
+
+.logo, .header-contacts {
+    width: 49%;
+}
+
+.logo img {
+    width: 290px;
+}
+
+.header-contacts {
+    color: #999;
+    font-size: 1.6em;
+    text-align: right;
+}
+
+.phone {
+    color: #fdc507;
+}
+
+/***********************************************************/
+/*********************** NAVIGATION ***********************/
+/*********************************************************/
+
+nav {
+    padding: 20px;
+    background: #333333; /* Old browsers */
+    background: -moz-linear-gradient(top, #333333 0%, #333333 50%, #2b2b2b 51%, #2b2b2b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #333333 0%,#333333 50%,#2b2b2b 51%,#2b2b2b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #333333 0%,#333333 50%,#2b2b2b 51%,#2b2b2b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#2b2b2b',GradientType=0 ); /* IE6-9 */
+}
+
+.mobile-icon {
+    width: 3%;
+    display: none;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    margin-right: 3%;
+    padding: 3px 13px;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+ul.main-navigation {
+    width: 80%;
+}
+
+ul.main-navigation li.active {
+    display: block;
+}
+
+.search-input {
+    width: 19%;
+}
+
+.search {
+    width: 220px;
+    padding: 5px 12px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    background-image: url(../img/search-lens.png);
+    background-position: right 9px bottom 2px;
+    background-repeat: no-repeat;
+}
+
+ul.main-navigation li {
+    margin: 0 3%;
+}
+
+ul.main-navigation li a {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+ul.main-navigation li:first-of-type {
+    margin-left: 0;
+}
+/***********************************************************/
+/************************* SLIDER *************************/
+/*********************************************************/
+
+.brand-autoplay .slick-slide {
+    margin: 30px;
+}
+/***********************************************************/
+/********************** MAIN CONTENT **********************/
+/*********************************************************/
+main {
+    padding: 30px 20px;
+    background-color: #fff;
+}
+
+.slogan {
+    text-align: center;
+    font-size: 2.4em;
+    background-color: #80423d; /*rgba(149, 46, 37, .6)*/
+    padding: 1.3% 0;
+}
+
+.used-bikes-section,
+.latest-bikes-section,
+.clothes-accessories-section {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    border: 10px solid #cacaca;
+}
+
+.clothes-accessories-section {
+    margin-right: 0;
+}
+
+.featured-products h3{
+    font-size: 2em;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.featured-products h3 a {
+    color: #fff;
+}
+
+/***********************************************************/
+/************************* FOOTER *************************/
+/*********************************************************/
+
+footer {
+    padding: 20px;
+    color: #787878;
+    font-size: 1.5em;
+    border-top: 5px solid #cacaca;
+    background-color: #dfdfdf;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-logo,
+.company-address,
+.opening-time,
+.footer-socials {
+    margin-right: 3%;
+    vertical-align: top;
+}
+
+.footer-socials {
+    margin-right: 0;
+    vertical-align: bottom;
+}
+
+.popup-social-likes {
+    display: block;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 9% 0;
+    font-size: 1.2em;
+    background-color: #fff;
+    position: relative;
+}
+
+.popup-social-likes:before {
+    border: solid;
+    border-color: #888 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: -7px;
+    content: "";
+    left: 45%;
+    position: absolute;
+    z-index: 99;
+}
+
+.footer-socials img {
+    margin-top: 8%;
+}
+
+.footer-socials p {
+    margin-top: 2%;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.opening-time,
+.footer-socials {
+    width: 32%;
+}
+
+.company-address,
+.opening-time {
+    line-height: 1.5em;
+}
+
+.company-address {
+    width: 17%;
+}
+
+.opening-time h3 {
+    font-weight: bold;
+}
+
+.opening-time .weekly {
+    margin-top: 4%;
+}
+
+.fb-likes, .tweet-likes,
+.google-plus {
+    width: 24%;
+    margin-left: 12%;
+    cursor: pointer;
+}
+
+.fb-likes {
+    margin-left: 0
+}
+
+.copyright {
+    padding: 20px;
+    font-size: 1.4em;
+    color: #787878;
+    background-color: #171717;
+}
+/***********************************************************/
+/*********************** MEDIA QUERIES ********************/
+/*********************************************************/
+
+@media screen and (max-width: 1200px)  {
+    .content {
+        width: 95%;
+    }
+
+    ul.main-navigation {
+        width: 77%;
+    }
+
+    .used-bikes-section,
+    .latest-bikes-section,
+    .clothes-accessories-section {
+        width: 29%;
+    }
+
+    .used-bikes-section,
+    .latest-bikes-section {
+        margin-right: 3%;
+    }
+
+    .company-address {
+        width: 18%;
+    }
+
+    .opening-time,
+    .footer-socials {
+        width: 29%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+
+    .used-bikes-section,
+    .latest-bikes-section,
+    .clothes-accessories-section {
+        width: 28%;
+    }
+
+    .used-bikes-section,
+    .latest-bikes-section {
+        margin-right: 4%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .used-bikes-section,
+    .latest-bikes-section,
+    .clothes-accessories-section {
+        width: 90%;
+        display: block;
+        margin: 0 auto 4%;
+    }
+
+    .footer-socials {
+        vertical-align: top;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .mobile-icon {
+        display: inline-block;
+    }
+
+    ul.main-navigation {
+        display: block;
+        width: 95%;
+        position: absolute;
+        left: 2.5%;
+        z-index: 100;
+        background-color: #2b2b2b;
+    }
+
+    ul.main-navigation li {
+        display: none;
+        padding: 2% 4%;
+        margin: 0;
+    }
+
+    ul.main-navigation li:hover {
+        background-color: #fdc507;
+    }
+
+    ul.main-navigation li:hover a {
+        color: #000;
+    }
+
+    .footer-logo,
+    .company-address,
+    .opening-time,
+    .footer-socials {
+        width: 47%;
+        margin-right: 2%;
+    }
+
+    .footer-logo {
+        text-align: left;
+    }
+
+    .opening-time,
+    .footer-socials {
+        margin-top: 4%;
+    }
+
+    .company-address,
+    .footer-socials {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .logo, .header-contacts,
+    .footer-logo, .company-address,
+    .opening-time, .footer-socials {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 270px;
+    }
+
+    .header-contacts {
+        margin-top: 4%;
+        font-size: 2em;
+    }
+
+    .mobile-icon {
+        width: 5%;
+    }
+
+    .slogan {
+        font-size: 1.8em;
+    }
+    footer {
+        font-size: 1.7em;
+    }
+}
